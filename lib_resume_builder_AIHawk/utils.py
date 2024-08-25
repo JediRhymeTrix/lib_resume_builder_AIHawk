@@ -44,6 +44,7 @@ def HTML_to_PDF(FilePath):
 
 def get_chrome_browser_options():
     options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
     options.add_argument("--start-maximized")  # Avvia il browser a schermo intero
     options.add_argument("--no-sandbox")  # Disabilita la sandboxing per migliorare le prestazioni
     options.add_argument("--disable-dev-shm-usage")  # Utilizza una directory temporanea per la memoria condivisa
